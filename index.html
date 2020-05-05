@@ -2,32 +2,38 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Code Quiz</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
-        <title>Code Quiz</title>
+        <script src="scripts.js"></script>
     </head>
     <body>
-        <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-button" class="btn-grid"></div>
-              <button class="btn">Answer1</button>
-              <button class="btn">Answer2</button>
-              <button class="btn">Answer3</button>
-              <button class="btn">Answer4</button>
+        <div class="quiz_wrapper">
 
-        </div>
-        <div class="controls">
-            <button id="start-btn" class="start-btn btn">start</button>
-            <button id="next-btn" class="next-btn btn hide">Next</button>
-        </div>
-
-        </div>
-
-
+            <div class="question" id="questionBox">
               
-        <script src="script.js"></script>
+            </div>
+            
+            <div class="options">
+                <ul id="ul">
+                    <li id="option1" onclick="button(this)"></li>
+                    <li id="option2" onclick="button(this)"></li>
+                    <li id="option3" onclick="button(this)"></li>
+                    <li id="option4" onclick="button(this)"></li>
+                </ul>
+            </div>
+            <div class="score">
+                <div class="next">
+                    <button type="button" onclick="next()">Submit Answer</button>
+                </div>
+                <div class="score-Box">
+                    score: <span id="scoreBox">0</span>
+                </div>
+                <div id="counter">
+                    Timer: <span id="timer">10:00</span>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
